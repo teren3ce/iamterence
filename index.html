@@ -2,37 +2,69 @@
 <html>
 
 <head>
-    <title>Terry Pouke - UI/UX Designer &amp; Coder</title>
+    <title>Terry Pouke - Product + Service Designer &amp; Software Developer</title>
+    <meta name="description" content="A Product + Service designer and Software Developer living in Lagos,
+    Nigeria. Co-founder and lead product designer @lightbulbux">
+    <meta name="keyword"
+        content="ui/ux designer, ux design, product design, service design, lead designer, senior design, web developer, mobile developer, fullstack, lagos, nigeria">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="assets/css/background.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <article class="content">
-        <svg class="logo" width="57" height="65" viewBox="0 0 57 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 31.0869H19.65C22.9637 31.0869 25.65 33.7732 25.65 37.0869V59C25.65 62.3137 22.9637 65 19.65 65H7.99999C3.58171 65 0 61.4183 0 57V31.0869Z"
+        <svg width="615" height="701" viewBox="0 0 615 701" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0 335H156.231C222.505 335 276.231 388.726 276.231 455V581.833C276.231 647.215 223.228 700.218 157.846 700.218C70.6701 700.218 0 629.548 0 542.371V335Z"
                 fill="#FFB72A" />
-            <path d="M0 5.99999C0 2.68628 2.68629 0 6 0H51C54.3137 0 57 2.68629 57 6V25.4348H0V5.99999Z" fill="#7FDBFF" />
-            <path d="M31.35 37.0869C31.35 33.7732 34.0363 31.0869 37.35 31.0869H57V48.5217C57 52.94 53.4183 56.5217 49 56.5217H37.35C34.0363 56.5217 31.35 53.8354 31.35 50.5217V37.0869Z"
+            <path
+                d="M0 0H413.847C524.304 0 613.847 89.5432 613.847 200V273.913H160C71.6345 273.913 0 202.279 0 113.913V0Z"
+                fill="#7FDBFF" />
+            <path
+                d="M338 455C338 388.726 391.726 335 458 335H614.231V451.067C614.231 538.243 543.561 608.913 456.385 608.913C391.003 608.913 338 555.911 338 490.529V455Z"
                 fill="#D52BFF" />
         </svg>
+
+
         <h1>Hi, I am
-            <a href="https://www.linkedin.com/in/pkterri/">Terry Pouke</a>
+            <a href="https://twitter.com/terrypouke/">Terry Pouke</a>
         </h1>
         <div>
-            <p>A passionate
-                <a href="https://careerfoundry.com/en/blog/ux-design/the-difference-between-ux-and-ui-design-a-laymans-guide" />UI/UX
-                </a> Designer & Coder</p>
-
-            <p>This is where all my good ideas and thoughts will reside, but in the mean time, feel free to check me
-                out on
-                <a href="https://www.linkedin.com/in/pkterri/">linkedin</a>,
-                <a href="http://twitter.com/terrypouke">twitter</a> or just send me a
-                <a href="mailto:me@iamterence.co">mail</a>
+            <p>A <strong>Product + Service designer</strong> and <strong>Software Developer</strong> living in Lagos,
+                Nigeria.</p>
+            <p>I am a co-founder of <a href="http://lightbulbux.com" target="_blank">LightbulbUX</a> and currently
+                leading user experience design there, crafting beautiful and functional digital solutions. Before that I
+                was a UX Designer and Frontend Developer at <a href="http://teamapt.com" target="_blank">Teamapt</a>,
+                designing some of the best financial solutions.</p>
+            <p>
+                I have worked on projects such as
+                <a href="https://play.google.com/store/apps/details?id=com.sterling.onepay&hl=en"
+                    target="_blank">Sterling OnePay Mobile</a> and
+                <a href="https://sterlingonline.sterlingbankng.com/login" target="_blank">Internet Banking</a>,
+                <a href="https://play.google.com/store/apps/details?id=com.appzonegroup.fcmb&hl=en" target="_blank">FCMB
+                    Mobile</a>,
+                <strong>Credit Direct Customer Loans</strong>,
+                and many others
             </p>
-            <p>Hope to hear from you soon</p>
-            <p>&mdash; Terry.</p>
+            <p>I'm a lover of anime, manga and comics and do a little <a href="htt://instagram.com/capturedbypouke"
+                    target="_blank">mobile photography</a> from time to time.</p>
+
+            <br />
+            <p>Let's connect, say hello:</p>
+            <ul>
+                <li><a href="mailto:hello@terrypouke.com">hello@terrypouke.com</a></li>
+                <li><a href="http://dribbble.com/terrypouke" target="_blank">Dribbble</a></li>
+                <li><a href="http://twiiter.com/terrypouke" target="_blank">Twitter</a></li>
+                <li><a href="http://instagram.com/terrypouke" target="_blank">Instagram</a></li>
+                <li><a href="http://linkedin.com/in//terrypouke" target="_blank">Linkedin</a></li>
+            </ul>
+
+            <div class="theme-switch">
+                <a class="action action-light active">L</a>
+                <a class="action action-dark">D</a>
+            </div>
         </div>
     </article>
 
@@ -41,6 +73,23 @@
         <div class="red"></div>
         <div class="green"></div>
     </div>
+
+    <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".theme-switch a").click(function (e) {
+                e.preventDefault();
+                if ($(this).hasClass("action-dark")) {
+                    $("body").addClass("dark");
+                } else {
+                    $("body").removeClass("dark");
+                }
+
+                $(".theme-switch a").removeClass("active");
+                $(this).addClass("active");
+            })
+        })
+    </script>
 </body>
 
 </html>

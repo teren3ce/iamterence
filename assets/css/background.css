@@ -88,138 +88,45 @@
     }
 }
 
-* {
-    zoom: .97;
-}
 
-html {
-    min-height: 100vh;
-}
-
-body {
-    font-family: 'Nunito', sans-serif;
-    color: #333;
-    text-align: center;
-    padding: 15px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    transition: all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.content {
-    position: relative;
-    z-index: 5;
-    text-align: left;
-    width: 650px;
-    margin: 0 auto;
-}
-
-.content h1 {
-    font-size: 50px;
-}
-
-.content a {
-    color: #D52BFF;
-    text-decoration: none;
-}
-
-.content a:hover {
-    color: #b704e4;
-    text-decoration: none;
-}
-
-.content svg {
-    height: 100px;
-    width: auto;
-}
-
-.content svg:hover path.colored {
-    fill: #ffa32b;
-}
-
-.content ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-}
-
-.content ul li {
-    display: inline-flex;
-    justify-content: start;
-    font-weight: 200;
-}
-
-.content ul li a {
-    border-bottom: 1px dashed #333;
-}
-
-.content .theme-switch {
-    position: absolute;
+.background {
+    position: fixed;
+    left: 0;
     right: 0;
-    top: 2.5%;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    opacity: .2;
 }
 
-.content .theme-switch a {
-    display: inline-flex;
-    padding: 10px 0;
-    margin-left: 20px;
-    font-size: 24px;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    opacity: .5;
+.background .red,
+.background .green,
+.background .blue {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin: -200px 0 0 -200px;
 }
 
-.content .theme-switch a.active {
-    color: #D52BFF;
-    font-weight: 800;
-    border-bottom: 2px solid #D52BFF;
-    opacity: 1;
+.background .red {
+    -webkit-animation: 7s red linear infinite;
+    -moz-animation: 7s red linear infinite;
+    background-image: -moz-radial-gradient(50% 50%, circle contain, rgba(222, 75, 218, .75), rgba(222, 75, 218, 0) 100%);
+    background-image: -webkit-radial-gradient(50% 50%, circle contain, rgba(222, 75, 218, .75), rgba(222, 75, 218, 0) 100%);
 }
 
-.content .theme-switch a:hover {
-    color: #b704e4;
-    cursor: pointer;
-    opacity: 1;
+.background .blue {
+    -webkit-animation: blue 6s linear infinite;
+    -moz-animation: blue 6s linear infinite;
+    background-image: -webkit-radial-gradient(50% 50%, circle contain, rgba(86, 173, 223, .75), rgba(86, 173, 223, 0) 100%);
+    background-image: -moz-radial-gradient(50% 50%, circle contain, rgba(86, 173, 223, .75), rgba(86, 173, 223, 0) 100%);
 }
 
-.content .theme-switch a.active:hover {
-    color: #D52BFF;
-}
-
-.dark {
-    color: #fff;
-    background-color: #111;
-}
-
-.dark .background {
-    background-color: #111;
-}
-
-.dark .content a {
-    color: #7FDBFF;
-}
-.dark .content a:hover {
-    color: #0fb7fa;
-}
-.dark .content .theme-switch a {
-    color: #fff;
-}
-
-.dark .content .theme-switch a:hover {
-    color: #fff;
-}
-
-.dark .content .theme-switch a.active {
-    color: #7FDBFF;
-    border-bottom-color: #7FDBFF;
-}
-
-.dark .content ul li a {
-    border-bottom: 1px dashed #aaa;
+.background .green {
+    -webkit-animation: green 8s linear infinite;
+    -moz-animation: green 8s linear infinite;
+    background-image: -webkit-radial-gradient(50% 50%, circle contain, rgba(210, 222, 12, .75), rgba(210, 222, 12, 0) 100%);
+    background-image: -moz-radial-gradient(50% 50%, circle contain, rgba(210, 222, 12, .75), rgba(210, 222, 12, 0) 100%);
 }
