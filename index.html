@@ -83,18 +83,22 @@
     <script type="text/javascript">
         $(function () {
 
+            var _manual = false;
             var _runTheme = function () {
-                var time = new Date().getHours();
-                if (time <= 6) {
-                    $("body").addClass("dark");
-                }
-                if (time > 6 && time <= 18) {
-                    $("body").removeClass("dark");
-                }
-                if (time > 18) {
-                    $("body").addClass("dark");
+                if (!_manual) {
+                    var time = new Date().getHours();
+                    if (time <= 6) {
+                        $("body").addClass("dark");
+                    }
+                    if (time > 6 && time <= 18) {
+                        $("body").removeClass("dark");
+                    }
+                    if (time > 18) {
+                        $("body").addClass("dark");
+                    }
                 }
             }
+
 
             $(".theme-switch a").click(function (e) {
                 e.preventDefault();
@@ -106,6 +110,8 @@
 
                 $(".theme-switch a").removeClass("active");
                 $(this).addClass("active");
+
+                _manual = true;
             });
 
             setInterval(function () {
