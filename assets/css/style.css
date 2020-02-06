@@ -1,225 +1,171 @@
-@-webkit-keyframes red {
-    0% {
-        -webkit-transform: rotate(0deg) translate(-40px) rotate(0deg) scale(1, 1);
-    }
-
-    50% {
-        -webkit-transform: rotate(-180deg) translate(-40px) rotate(-180deg) scale(1, 1.33);
-    }
-
-    100% {
-        -webkit-transform: rotate(-360deg) translate(-40px) rotate(-360deg) scale(1, 1);
-    }
-}
-
-@-moz-keyframes red {
-    0% {
-        -moz-transform: rotate(0deg) translate(-40px) rotate(0deg) scale(1, 1);
-    }
-
-    50% {
-        -moz-transform: rotate(-180deg) translate(-40px) rotate(-180deg) scale(1, 1.33);
-    }
-
-    100% {
-        -moz-transform: rotate(-360deg) translate(-40px) rotate(-360deg) scale(1, 1);
-    }
-}
-
-@-webkit-keyframes green {
-    0% {
-        -webkit-transform: rotate(0deg) translate(30px) rotate(0deg) scale(1, 1);
-        opacity: 1
-    }
-
-    66% {
-        -webkit-transform: rotate(180deg) translate(30px) rotate(-180deg) scale(1, 1.33);
-        opacity: .33
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg) translate(30px) rotate(-360deg) scale(1, 1);
-        opacity: 1
-    }
-}
-
-@-moz-keyframes green {
-    0% {
-        -moz-transform: rotate(0deg) translate(30px) rotate(0deg) scale(1, 1);
-        opacity: 1;
-    }
-
-    66% {
-        -moz-transform: rotate(180deg) translate(30px) rotate(-180deg) scale(1, 1.33);
-        opacity: .33;
-    }
-
-    100% {
-        -moz-transform: rotate(360deg) translate(30px) rotate(-360deg) scale(1, 1);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes blue {
-    0% {
-        -webkit-transform: rotate(0deg) translate(30px) rotate(0deg) scale(1, 1);
-    }
-
-    33% {
-        -webkit-transform: rotate(180deg) translate(30px) rotate(-180deg) scale(1.66, 1);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg) translate(30px) rotate(-360deg) scale(1, 1);
-    }
-}
-
-@-moz-keyframes blue {
-    0% {
-        -moz-transform: rotate(0deg) translate(30px) rotate(0deg) scale(1, 1);
-    }
-
-    33% {
-        -moz-transform: rotate(180deg) translate(30px) rotate(-180deg) scale(1.66, 1);
-    }
-
-    100% {
-        -moz-transform: rotate(360deg) translate(30px) rotate(-360deg) scale(1, 1);
-    }
-}
-
 * {
-    zoom: .97;
+  zoom: 1;
 }
 
 html {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
-    color: #333;
-    text-align: center;
-    padding: 15px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    transition: all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+  margin: 0;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .content {
-    position: relative;
-    z-index: 5;
-    text-align: left;
-    width: 650px;
-    margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  text-align: left;
+  width: 650px;
+  margin: 0 auto;
 }
 
 .content h1 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .content a {
-    color: #D52BFF;
-    text-decoration: none;
+  color: #d52bff;
+  text-decoration: none;
 }
 
 .content a:hover {
-    color: #b704e4;
-    text-decoration: none;
+  color: #b704e4;
+  text-decoration: none;
 }
 
 .content svg {
-    height: 100px;
-    width: auto;
+  height: 100px;
+  width: auto;
 }
 
 .content svg:hover path.colored {
-    fill: #ffa32b;
+  fill: #ffa32b;
 }
 
 .content ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
 }
 
 .content ul li {
-    display: inline-flex;
-    justify-content: start;
-    font-weight: 200;
+  display: inline-flex;
+  justify-content: start;
+  font-weight: 200;
 }
 
 .content ul li a {
-    border-bottom: 1px dashed #333;
+  border-bottom: 1px dashed #333;
 }
 
 .content .theme-switch {
-    position: absolute;
-    right: 0;
-    top: 2.5%;
+  position: absolute;
+  right: 0;
+  top: 2.5%;
 }
 
 .content .theme-switch a {
-    display: inline-flex;
-    padding: 10px 0;
-    margin-left: 20px;
-    font-size: 24px;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    opacity: .5;
+  display: inline-flex;
+  padding: 10px 0;
+  margin-left: 20px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  opacity: 0.5;
 }
 
 .content .theme-switch a.active {
-    color: #D52BFF;
-    font-weight: 800;
-    border-bottom: 2px solid #D52BFF;
-    opacity: 1;
+  color: #d52bff;
+  font-weight: 800;
+  border-bottom: 2px solid #d52bff;
+  opacity: 1;
 }
 
 .content .theme-switch a:hover {
-    color: #b704e4;
-    cursor: pointer;
-    opacity: 1;
+  color: #b704e4;
+  cursor: pointer;
+  opacity: 1;
 }
 
 .content .theme-switch a.active:hover {
-    color: #D52BFF;
+  color: #d52bff;
 }
 
 .dark {
-    color: #fff;
-    background-color: #111;
+  color: #fff;
+  background-color: #111;
 }
 
 .dark .background {
-    background-color: #111;
+  background-color: #111;
 }
 
 .dark .content a {
-    color: #7FDBFF;
+  color: #7fdbff;
 }
 .dark .content a:hover {
-    color: #0fb7fa;
+  color: #0fb7fa;
 }
 .dark .content .theme-switch a {
-    color: #fff;
+  color: #fff;
 }
 
 .dark .content .theme-switch a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .dark .content .theme-switch a.active {
-    color: #7FDBFF;
-    border-bottom-color: #7FDBFF;
+  color: #7fdbff;
+  border-bottom-color: #7fdbff;
 }
 
 .dark .content ul li a {
-    border-bottom: 1px dashed #aaa;
+  border-bottom: 1px dashed #aaa;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    padding: 0 !important;
+    width: 100%;
+    display: block;
+    font-size: 16.5px;
+    min-height: none !important;
+  }
+  .content {
+    width: calc(100% - 3em);
+    padding: 4em 1.5em;
+  }
+  .content h1 {
+    font-size: 32px;
+  }
+  .content svg {
+    height: 65px;
+  }
+  .content ul {
+    flex-wrap: wrap;
+  }
+  .content ul li {
+    margin-right: 1em;
+    margin-bottom: 15px;
+  }
+
+  .content .theme-switch {
+    right: 10%;
+    top: 8%;
+  }
+  .content .theme-switch a {
+    font-size: 18px;
+  }
 }
